@@ -1,7 +1,6 @@
 @import compass
 @import font/awesome
 @import sticky-footer
-
 // .container
 // 	width: 1040px !important
 // .header, .index .fotorama, .footer
@@ -92,7 +91,6 @@ li.divider
 			margin-left: 0 !important
 			width: 100%
 
-
 hr
 	border-top: 1px solid #777
 	margin-top: 40px
@@ -128,7 +126,7 @@ hr
 
 // PAGES
 // index
-.main-page
+.main-page, .main-page-2
 	.header
 		position: absolute
 		z-index: 5000
@@ -143,6 +141,65 @@ hr
 			background-color: rgba(0, 0, 0, 0.15)
 	.fotorama
 		margin-bottom: 40px
+
+// index2.html
+.main-page-2
+	.header
+		position: absolute
+		z-index: 5000
+		width: 100vw
+		border-bottom: none
+		margin-bottom: 0
+		.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
+			background-color: rgba(0, 0, 0, 0.15)
+		.dropdown-menu
+			background: rgba(255, 255, 255, 0.8)
+		.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus
+			background-color: rgba(0, 0, 0, 0.15)
+	.fotorama
+		margin-bottom: 40px
+	.container
+		.flex-wrap
+			display: flex
+			margin-left: -20px
+			margin-right: -20px
+			.article
+				padding: 20px
+				margin: 0 20px 0 0
+				background: #eee
+			.news
+				flex: 1 0 300px
+				padding: 20px
+				background: #eee
+				hr
+					margin-top: 0
+					margin-bottom: 20px
+				.news-item
+					border-bottom: 1px dashed #666
+					margin-bottom: 15px
+					&:last-child
+						border-bottom: none
+					img
+						width: 100%
+						margin-bottom: 10px
+						&.pull-left
+							width: 130px
+							margin: 0 10px 0 0
+					p
+						color: #333
+						font-size: 14px
+					a:hover
+						text-decoration: none
+			@media (max-width: 599px)
+				display: block
+				.article
+					margin: 0 0 40px 0
+				.news-item
+					img
+						max-width: 300px
+			@media (max-width: 799px)
+				.news
+					flex: 1 0 220px
 
 // equipment
 .equipment-list
