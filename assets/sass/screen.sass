@@ -24,9 +24,20 @@ li.divider
 	background-color: #999 !important
 	opacity: 0.5 !important
 
+.nowrap
+	white-space: nowrap
+
 .btn
 	@media (max-width: 480px)
 		font-size: 14px
+		width: 100%
+.btn-white
+	background: #fff
+	color: #333
+.btn-black
+	background: #333
+	color: #fff
+
 // header
 .header
 	border-bottom: 1px solid #777
@@ -39,6 +50,32 @@ li.divider
 		background: rgba(255, 255, 255, 0.9)
 	.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus
 		background-color: rgba(0, 0, 0, 0.15)
+	.search
+		margin-left: 0
+		margin-right: 0
+		border: none
+		@media (min-width: 1280px)
+			margin-left: 20px
+		input
+			padding-left: 30px !important
+		button
+			background: transparent
+			position: relative
+			left: -217px
+			top: 2px
+			border: 0
+			color: #999
+			&:focus
+				outline: none
+			@media (max-width: 767px)
+				left: 5px
+				top: -33px
+	.join-link
+		margin-left: 30px
+		float: left
+		a
+			color: #999
+			font-size: 20px
 .navbar-middle
 	@media (min-width: 768px) and (max-width: 1200px)
 		float: none !important
@@ -240,6 +277,193 @@ hr
 			width: 100%
 			p
 				font-size: 12px
+
+//catalog
+.catalog-page, .signin-page, .signup-page
+	.header
+		.link-signin
+			display: block
+		.link-account
+			display: none
+.welcome-page
+	header
+		.link-account
+			display: block
+			background: #eee
+		.link-signin
+			display: none
+.catalog-page, .signin-page, .signup-page, .welcome-page, .explore-page
+	.header
+		margin-bottom: 50px
+		.navbar.navbar-base
+			display: none !important
+		.navbar-catalog
+			display: block !important
+			visibility: visible !important
+
+.gallery-item
+	position: relative
+	+border-radius(4px)
+	img
+		width: 100%
+	.gallery-text
+		position: absolute
+		top: 0
+		width: 100%
+		color: #fff
+		padding: 10px
+		width: 100%
+		td
+			padding: 10px
+			vertical-align: top
+			&.photo
+				width: 50px
+			img
+				width: 50px
+				height: 50px
+				+border-radius(50%)
+				border: 2px solid #fff
+			p
+				font-size: 14px
+			span
+				font-size: 12px
+	.table
+		td
+			text-align: center
+			border: 1px solid #ddd
+			a
+				color: #999
+				display: block
+				&:hover
+					color: #333
+					text-decoration: none
+.catalog
+	section
+		margin-bottom: 20px
+	.bg-grey
+		background: #eee
+		border: 1px solid #ddd
+	.header-block
+		padding: 10px
+		p
+			color: #666
+			margin-bottom: 0
+		a.pull-right
+			color: #999
+			&:hover
+				text-decoration: none
+				color: #666
+	//fotorama custom style
+	.fotorama__wrap *
+		box-sizing: border-box
+		.fotorama__nav__frame .fotorama__dot
+			width: 10px
+			height: 10px
+
+	.top-slider
+		.slider-item
+			background: #333
+			@media (min-width: 768px)
+				height: 100%
+			.slider-img
+				height: 100%
+				float: left
+				@media (max-width: 991px)
+					width: 60%
+			.slider-text
+				@media (min-width: 768px)
+					height: 100%
+				td
+					vertical-align: middle
+					padding: 15px
+					color: #fff
+					@media (max-width: 991px)
+						h1
+							font-size: 25px !important
+					hr
+						border: 1px solid #fff
+						margin: 20px 0
+					p
+						margin-bottom: 20px
+						@media (max-width: 991px)
+							font-size: 14px
+	.features
+		.flex-wrap
+			display: flex
+			@media (max-width: 991px)
+				display: block
+			h3
+				text-align: left !important
+			.aside-left
+				flex: 0 0 300px
+				margin-right: 20px
+				@media (max-width: 991px)
+					margin: 0 0 20px
+				.gfeed-block
+					a
+						display: block
+						padding: 10px
+						border-top: 1px solid #ddd
+						font-size: 14px
+						color: #333
+						img
+							width: 50px
+							height: 50px
+							+border-radius(4px)
+							margin-right: 20px
+						&:hover
+							background: #fff
+							text-decoration: none
+			.collection
+				flex: 1
+				.featured
+					a.pull-right
+						i
+							font-weight: bold
+							margin-left: 3px
+							vertical-align: middle
+							line-height: 13px
+						@media (max-width: 991px)
+							float: none !important
+							display: block
+							text-align: right
+					.featured-gallery
+						padding: 10px
+						a
+							color: #333
+							img
+								width: 90%
+								max-width: 300px
+								+border-radius(4px)
+	.made, .creations
+		.header-block
+			border-bottom: none
+		.fotorama
+			.list-slider
+				// padding: 20px 0
+				border-top: none
+				.gallery-item
+					margin: 0 20px
+
+.sign-in
+	form
+		margin: 0 auto
+		max-width: 700px
+		h3
+			color: #777
+.sign-up
+	form
+		margin: 0 auto
+		max-width: 700px
+		label.control-label
+			text-align: left
+
+.explore
+	.explore-title
+		margin-bottom: 20px
+		span
+			color: #777
+			margin-left: 10px
 
 //residents
 .residents

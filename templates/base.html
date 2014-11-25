@@ -20,7 +20,7 @@
 	</head>
 	<body class="{% block className %}{% endblock %}">
 		<header class="header">
-			<nav class="navbar navbar-default" role="navigation">
+			<nav class="navbar navbar-default navbar-base" role="navigation">
 				<div class="container">
 					<div class="navbar-header">
 						<a href="/"><img src="/static/img/logos/fablab.png" alt="Фаблаб Москва"></a>
@@ -85,10 +85,81 @@
 									<li><a href="/creativity/large">По крупному</a></li>
 								</ul>
 							</li>
-							<li><a href="http://www.thingiverse.com/search?q=fablab77" target="_blank">Проекты</a></li>
 							<li><a href="https://www.facebook.com/fablab77" target="_blank">Новости</a></li>
+							<li><a href="/catalog">Каталог</a></li>
 							<li><a href="/events">События</a></li>
 							<li><a href="/contacts">Контакты</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right visible-lg">
+							<li><a href="http://web.mit.edu/" target="_blank"><img src="/static/img/logos/mit.png" alt="MIT" height="18"></a></li>
+							<li><a href="http://www.misis.ru/" target="blank"><img src="/static/img/logos/misis.png" alt="Moscow Institute of Steel and Alloys" height="18"></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<nav class="navbar navbar-default navbar-catalog hidden" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<a href="/"><img src="/static/img/logos/fablab.png" alt="Фаблаб Москва"></a>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex8-collapse">
+							<div class="navbar-header-button-icon">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</div>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse navbar-ex8-collapse">
+						<ul class="nav navbar-nav navbar-middle">
+							<li>
+								<a href="/catalog">Catalog</a>
+							</li>
+							<li>
+								<a href="#">Dashboard</a>
+							</li>
+							<li>
+								<a href="" class="dropdown-toggle" data-toggle="dropdown">Explore <span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="/explore">Things</a></li>
+									<li><a href="">Customizable things</a></li>
+									<li><a href="">Collections</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Create <span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="">Upload a thing</a></li>
+									<li><a href="">Customize a things</a></li>
+									<li><a href="">Create an App</a></li>
+								</ul>
+							</li>
+							<li class="link-signin">
+								<a href="/sign-in">Sign in / Join</a>
+							</li>
+							<li class="link-account">
+								<a href="" class="dropdown-toggle" data-toggle="dropdown">My Account<span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="">My Profile</a></li>
+									<li class="divider"></li>
+									<li><a href="">My things</a></li>
+									<li><a href="">My Collections</a></li>
+									<li><a href="">Things I made</a></li>
+									<li><a href="">Things I like</a></li>
+									<li class="divider"></li>
+									<li><a href="">Sign Out</a></li>
+								</ul>
+							</li>
+							<li>
+								<form class="navbar-form search" role="search">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Search">
+									</div>
+									<button type="submit">
+										<i class="icon icon-search"></i>
+									</button>
+								</form>
+
+							</li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right visible-lg">
 							<li><a href="http://web.mit.edu/" target="_blank"><img src="/static/img/logos/mit.png" alt="MIT" height="18"></a></li>
